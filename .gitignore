@@ -1,0 +1,22 @@
+# Ignore sensitive configuration file
+lib/config.py
+
+# Ignore any other configuration or sensitive files
+settings.json
+
+# Ignore VSCode settings directory
+.vscode/
+
+# Ignore PyMakr configuration
+pymakr.conf
+
+# Ignore log files
+*.log
+
+# Ignore other temporary files
+*.tmp
+*.temp
+
+# Ignore Python bytecode
+*.pyc
+__pycache__/
