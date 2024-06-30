@@ -58,7 +58,7 @@ Code is uploaded to the Raspberry Pi Pico W using the Pymakr extension in VSCode
 
 ![Screenshot 2024-06-24 at 22.01.55](https://hackmd.io/_uploads/H1HUZUDIR.png)
 
-> [!NOTE] See more detailed information [here](https://hackmd.io/@lnu-iot/rkiTJj8O9).
+> :information_source: See more detailed information [here](https://hackmd.io/@lnu-iot/rkiTJj8O9).
 
 #### Step 4 - Install MicroPython Firmware:
 
@@ -68,15 +68,14 @@ Code is uploaded to the Raspberry Pi Pico W using the Pymakr extension in VSCode
 
 ![Pico connection](https://www.raspberrypi.com/documentation/microcontrollers/images/MicroPython-640x360-v2.gif)
 
-> [!NOTE] See more detailed information [here](https://hackmd.io/@lnu-iot/rkFw7gao_).
+> :information_source: See more detailed information [here](https://hackmd.io/@lnu-iot/rkFw7gao_).
 
 ## Putting everything together <img src="https://hackmd.io/_uploads/HkdgLGiLA.png" alt="circuit" width="50"/>
 This project involves connecting a Raspberry Pi Pico W, a motion sensor, a buzzer, an LCD screen, a keyboard, and two resistors. The details of how each component is connected are described below.
 #### Circuit diagram
 ![Screenshot 2024-06-28 at 18.37.23](https://hackmd.io/_uploads/ry6mDv2IA.png)
 
-
-> [!TIP] The motion sensor needs 5V, not 3.3V.
+> :bulb: **Tip:** The motion sensor needs 5V, not 3.3V.
 #### Wiring Instructions
 
 ##### Raspberry Pi Pico W:
@@ -347,4 +346,4 @@ This is my first IoT project and it is both new and exciting for me. Although I 
 ![prototype](https://hackmd.io/_uploads/SJ8yo7nIR.jpg)
 
 
->[!important][Click here to See the Video Presentation ](https://www.youtube.com/watch?v=kD_n2ydlhK4)
+> :mega: [Click here to See the Video Presentation ](https://www.youtube.com/watch?v=kD_n2ydlhK4)
