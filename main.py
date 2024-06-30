@@ -1,13 +1,13 @@
-import sys                    # Using sys to print Exception reasons
+import sys                    # Uses sys to print Exception reasons
 import time                   # Allows use of time.sleep() for delays
-from mqtt import MQTTClient   # For use of MQTT protocol to talk to Adafruit IO
+from mqtt import MQTTClient   # Uses MQTT protocol to communicate with Node-Red dashboard
 import micropython            # Needed to run any MicroPython code
-from machine import Pin       # Define pin
+from machine import Pin       # Uses to define pin
 import config                 # Contain all keys used here
 import wifiConnection         # Contains functions to connect/disconnect from WiFi 
-import ujson                  # Creating JSON object for MQTT & Telegraf
-import wifiConnection         # Using for WiFi connection
-import customChars
+import ujson                  # Creates JSON object for MQTT & Telegraf
+import wifiConnection         # Uses for WiFi connection
+import customChars            # Creates custom chars combined with text to show on LCD
 
 # Initialize LCD
 lcd = customChars.initializeLcd()
@@ -58,7 +58,7 @@ def build_json(variable_1, value_1):
     except:
         return None
 
-# Sensing message to MQTT server
+# Send message to MQTT server
 def send_topic(topicObject, topicName):
     print(f"{topicName}: {topicObject}")
     try:
@@ -107,7 +107,7 @@ try:
 except KeyboardInterrupt:
     print("Keyboard interrupt")
 
-# Connecting to MQTT server
+# Connect to MQTT server
 try:
     client = MQTTClient(client_id=config.MQTT_CLIENT_ID, server=config.MQTT_SERVER, port=config.MQTT_PORT, user=config.MQTT_USER, password=config.MQTT_KEY)
     # client = MQTTClient(config.MQTT_CLIENT_ID, config.MQTT_SERVER, config.MQTT_PORT)
