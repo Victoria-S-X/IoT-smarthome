@@ -82,13 +82,18 @@ This project involves connecting a Raspberry Pi Pico W, a motion sensor, a buzze
 - Acts as the central microcontroller and manages all operations.
 ##### Keypad:
 - The keypad has 8 pins. Connect the row pins of the keypad to the Pico's GPIO pins (e.g. GP5 to GP2). Connect the column pins of the keypad to another set of GPIO pins (e.g. GP9 to GP6).
+- Current: quite minimum, so its power consumption is ignored here.
 ##### Motion Sensor:
 - Power: Connect the VCC pin of the PIR sensor to the VBUS pin on the Pico for 5V.
 - Ground: Connect the GND pin to the ground rail.
 - Output: Connect the OUT pin to a GPIO pin on the Pico (e.g. GP10).
+- Current: 
+    - Idle Current: < 50 µA
+    - Active Current: ~1 mA
 ##### Buzzer:
 - Connect the positive side of the buzzer to a GPIO pin (e.g. GP11).
 - Connect the negative side of the buzzer to the ground rail.
+- Current: 15 mA
 ##### LCD Screen:
 - Connect the VSS pin to the ground rail.
 - Connect the VDD pin to VSYS pin.
@@ -97,11 +102,16 @@ This project involves connecting a Raspberry Pi Pico W, a motion sensor, a buzze
 - Connect the data pins (D4 to D7) to GPIO pins (e.g., GP10 to GP7).
 - Connect the A (anode) pin to the 5V power rail.
 - Connect the K (cathode) pin to the ground rail.
+- Current: About 20 mA to 60 mA
 ##### __Resistor__:
 - Use two 1kΩ resistors in series where needed to create an equivalent 2kΩ resistance.
 
 
 DEVELOPMENT SETUP: The current breadboard setup is perfect for prototyping. Modifications, troubleshooting and testing can be easily performed without soldering. For production setups, the breadboard should be replaced with a customized printed circuit board to ensure reliability, durability, and a more compact design.
+
+#### Electrical calculations
+The power consumption calculation for the used components excluding the Raspberry pi pico w:
+- Total power consumption = Current(Motion sensor) + Current(Buzzer) + Current(LCD screen) = 1 mA + 15 mA + 60 mA = 76 mA
 
 ## Platform  ![Control Panel](https://hackmd.io/_uploads/BkFjUMs80.png)
 I chose [Node-RED](https://nodered.org/docs/getting-started/local) as the platform for this smart home security system project, using MQTT to build dashboards and manage communication between hardware components. Node-RED provides a visual interface that simplifies the creation of complex workflows by dragging and dropping nodes. It is highly extensible with a large library of pre-built nodes that can be used for a variety of functions such as HTTP requests, WebSockets and data processing.
